@@ -148,7 +148,7 @@ class RegisterForm extends Component {
                            <input required
                               value={username}
                               title='Student Name'
-                              minLength={4}
+                              minLength={8}
                               maxLength={16}
                               onChange={this.handleChange}
                               onBlur={this.handleBlur}
@@ -168,6 +168,8 @@ class RegisterForm extends Component {
                         <div className="form-group">
                            <label>Phone Number</label>
                            <input required
+                              pattern='^\d+$'
+                              maxLength={10}
                               value={phoneNumber}
                               title='Phone Number'
                               onChange={this.handleChange}
